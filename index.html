@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Protfilio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/df908adb86.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">Prabin Kumar Kushwaha.</div>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Java Developer</p>
+                <h1>Hi, I'm <span> Prabin</span> <br>kushwaha from Nepal.</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------About --------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I’m Prabin Kumar Kushwaha, a passionate Computer Science and Engineering student at Chennai Institute of Technology. I’m originally from Nepal and deeply interested in Java Full Stack Development, Cybersecurity, and entrepreneurship.
+
+I enjoy building innovative projects that solve real-world problems — one of my favorite ideas is creating an website to fill gaps between rural entrepreneurship.
+
+Beyond coding, I love traveling, playing chess, and solving Rubik’s cubes. My goal is to become a skilled Java Full Stack Developer and eventually start my own tech venture that makes a meaningful impact.</p>
+<div class="tab-titles">
+    <P class="tab-links active-link" onclick="opentab('skills')">Skills</P>
+    <P class="tab-links" onclick="opentab('experience')">Experience</P>
+    <P class="tab-links" onclick="opentab('education')">Education</P>
+</div>
+<div class="tab-contents active-tab" id="skills">
+    <ul>
+        <li> <span>HTML</span></li>
+        <li> <span>CSS</span></li>
+        <li> <span>JavaScript</span></li>
+        <li> <span>C/C++</span></li>
+        <li> <span>Java</span></li>
+
+    </ul>
+</div>
+<div class="tab-contents" id="experience">
+    <ul>
+        <li> <span>2025 (Nov-Dec)</span><br>Web-Development</li>
+       
+    </ul>
+</div>
+<div class="tab-contents" id="education">
+    <ul>
+         <li> <span>Computer Science Engineering 2024-2028</span><br>Chennai Institute Of Technology</li>
+        <li> <span>+2 - 2023</span><br> Hetauda School Of Management & Social Science</li>
+        <li> <span>SEE - 2021</span> <br>Shree Janta Secondary School, Bharatpur-Nepal</li>
+
+    </ul>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------- project --------------------->
+     <div id="project">
+        <div class="container">
+            <h1 class="sub-title">My Project</h1>
+            <div class="project-list">
+                <div>
+                    <h2>UdyamSetu</h2>
+                    <p>UdyamSetu is a lightweight, mobile-friendly web platform that empowers rural entrepreneurs through digital workshops, learning materials, and live mentorship sessions. Built with Node.js, Express, MongoDB, and JavaScript, it connects learners, facilitators, and admins to foster entrepreneurship growth in rural areas.</p>
+                    <a href="https://github.com/prabin900"><i class="fa-brands fa-github"></i>Github</a>
+                    <a href="https://udyam-setu.vercel.app/"><i class="fa-solid fa-link"></i>Link</a>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <!-- ------------------- contact --------------------->
+    <div id="contact">
+        <div class="container">
+           <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>prabinsingh9816@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+916204145954</p>
+                <div class="social-icons">
+                    <a href="https://github.com/prabin900"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/prabin-kumar-kushwaha-687183355?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+             <div class="contact-right">
+                <form action="">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+             </div>
+           </div>
+            </div>
+        </div>
+    
+    <!-- ------------------- footer --------------------->    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Prabin Kumar Kushwaha. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+        function openmenu(){
+            document.getElementById("sidemenu").style.right = "0";
+        }
+        function closemenu(){
+            document.getElementById("sidemenu").style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
